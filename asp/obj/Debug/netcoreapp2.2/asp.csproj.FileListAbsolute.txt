@@ -1,0 +1,14 @@
+C:\Users\151\Desktop\tretyakov.eu\asp\bin\Debug\netcoreapp2.2\asp.deps.json
+C:\Users\151\Desktop\tretyakov.eu\asp\bin\Debug\netcoreapp2.2\asp.runtimeconfig.json
+C:\Users\151\Desktop\tretyakov.eu\asp\bin\Debug\netcoreapp2.2\asp.runtimeconfig.dev.json
+C:\Users\151\Desktop\tretyakov.eu\asp\bin\Debug\netcoreapp2.2\asp.dll
+C:\Users\151\Desktop\tretyakov.eu\asp\bin\Debug\netcoreapp2.2\asp.pdb
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.csprojAssemblyReference.cache
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.csproj.CoreCompileInputs.cache
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.RazorAssemblyInfo.cache
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.RazorAssemblyInfo.cs
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.AssemblyInfoInputs.cache
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.AssemblyInfo.cs
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.RazorTargetAssemblyInfo.cache
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.dll
+C:\Users\151\Desktop\tretyakov.eu\asp\obj\Debug\netcoreapp2.2\asp.pdb
