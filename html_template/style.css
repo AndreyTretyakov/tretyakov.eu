@@ -12,6 +12,7 @@ body
     display : flex;
     flex-direction : column;
     align-items : center;
+    position : relative;
     margin : 0;
     padding : 0 15px;
     background-color : #ffffff;
@@ -60,18 +61,26 @@ nav
 {
     order : -1;
 }
-/*main
+header
+{
+    background-color : rgba(26, 186, 197, 0.2);    
+}
+main
 {
     background-color : rgba(0,0,0,.1);
 }
 nav
 {
-    background-color : rgba(0,0,0,.1);
+    background-color : rgba(255,0,0,.2);
 }
 aside
 {
-    background-color : rgba(0,0,0,.1);
-}*/
+    background-color : rgba(0,255,0,.2);
+}
+footer
+{
+    background-color : rgba(197, 194, 26, 0.2);
+}
 /*Navigation*/
 nav
 {
@@ -110,18 +119,7 @@ p
 {
     line-height: 2;
 }
-@media screen and (prefers-color-scheme: dark)
-{
-    body
-    {
-        background-color : #333333;
-        color : #ffffff;
-    }
-    nav a
-    {
-        color : #ffffff;
-    }
-}
+
 /*Size device*/
 @media screen and (max-width: 1200px)
 {
@@ -141,21 +139,72 @@ p
 }
 @media screen and (max-width: 768px)
 {
+    header
+    {
+        padding-right : 60px;
+        width : calc(100% - 75px);
+    }
     nav
     {
-        width : 100%;
+        width : calc(100% - 30px);
+        max-width : 270px;
+        height : 100%;
+        padding : 0 15px;
+        position : fixed;
+        right : -300px;
+        top : 0;
+        transition: .5s;
+        background-color : #ffffff;
+        z-index : 9;
     }
-    nav ul
+    nav:hover
     {
-        flex-flow : wrap;
-        justify-content : space-between;
+        right : 0;
     }
-    nav ul a
+    nav::after
     {
-        padding : 7.5px 15px;
+        content : '';
+        width : 50px;
+        height : 50px;
+        background-color : green;
+        cursor : pointer;
+        position : absolute;
+        top : 0px;
+        left : -50px;
     }
+    nav:hover::after
+    {
+        background-color : red;
+    }
+
+    /*ARTICLE*/
     article
     {
-        margin : 15px auto;
+        margin : 0 auto 15px;
+    }
+    article .breadcrumbs
+    {
+        border : 2px solid red;
+        order : -1;
+    }
+}
+
+
+
+/*Themes*/
+@media screen and (prefers-color-scheme: dark)
+{
+    body
+    {
+        background-color : #333333;
+        color : #ffffff;
+    }
+    nav
+    {
+        background-color : #333333;        
+    }
+    nav a
+    {
+        color : #ffffff;
     }
 }
