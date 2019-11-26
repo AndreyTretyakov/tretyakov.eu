@@ -21,6 +21,16 @@ body
     font-weight : 300;
 }
 /*Structure*/
+.row
+{
+    display : flex;
+    flex-flow : row;
+}
+.col
+{
+    display : flex;
+    flex-flow : column;
+}
 body > *
 {
     width : calc(100% - 30px);
@@ -50,7 +60,7 @@ nav
 {
     order : -1;
 }
-main
+/*main
 {
     background-color : rgba(0,0,0,.1);
 }
@@ -61,7 +71,7 @@ nav
 aside
 {
     background-color : rgba(0,0,0,.1);
-}
+}*/
 /*Navigation*/
 nav
 {
@@ -72,7 +82,6 @@ nav a
 {
     color : #000;
     text-decoration : none;
-    border : 1px dashed green;
     padding : 7.5px;
 }
 /*Title*/
@@ -103,11 +112,9 @@ p
     main
     {
         flex-flow : wrap;
-        border : 1px solid red;
     }
     article
     {
-        border : 1px dashed green;
         margin-right : initial;
     }
     aside
