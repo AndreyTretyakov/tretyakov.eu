@@ -78,11 +78,22 @@ nav
     display : flex;
     flex-flow : column;
 }
+nav ul
+{
+    list-style : none;
+    display : flex;
+    flex-flow : column;
+}
+nav ul li
+{
+    border : 1px dashed green;
+}
 nav a
 {
+    display : block;
     color : #000;
     text-decoration : none;
-    padding : 7.5px;
+    padding : 7.5px;   
 }
 nav a:hover
 {
@@ -133,7 +144,15 @@ p
     nav
     {
         width : 100%;
-        border : 1px solid red;
+    }
+    nav ul
+    {
+        flex-flow : wrap;
+        justify-content : space-between;
+    }
+    nav ul a
+    {
+        padding : 7.5px 15px;
     }
     article
     {
