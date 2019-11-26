@@ -84,6 +84,10 @@ nav a
     text-decoration : none;
     padding : 7.5px;
 }
+nav a:hover
+{
+    background-color : rgba(0,0,0,.1);
+}
 /*Title*/
 h1, h2, h3, h4, h5, h6
 {
