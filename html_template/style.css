@@ -3,14 +3,97 @@
     margin : 0;
     padding : 0;
 }
+html, body
+{
+    height : 100%;
+}
 body
 {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    margin : 0;
+    padding : 0 15px;
     background-color : #ffffff;
     color : #000000;
+    font-family : Verdana;
+    font-size : 16px;
+    font-weight : 300;
 }
-.container
+/*Structure*/
+.row
 {
-    width : 
+    display : flex;
+    flex-flow : row;
+}
+.col
+{
+    display : flex;
+    flex-flow : column;
+}
+body > *
+{
+    width : calc(100% - 30px);
+    max-width : 1200px;
+    padding : 15px;
+    margin : 0 auto;
+}
+header, footer
+{
+    flex : 0 0 auto;
+}
+main
+{
+    display : flex;
+    flex : 1 0 auto;
+}
+nav, aside
+{
+    width : 200px;
+}
+article
+{
+    flex : 1;
+    margin : 0 15px;
+}
+nav
+{
+    order : -1;
+}
+/*main
+{
+    background-color : rgba(0,0,0,.1);
+}
+nav
+{
+    background-color : rgba(0,0,0,.1);
+}
+aside
+{
+    background-color : rgba(0,0,0,.1);
+}*/
+/*Navigation*/
+nav
+{
+    display : flex;
+    flex-flow : column;
+}
+nav a
+{
+    color : #000;
+    text-decoration : none;
+    padding : 7.5px;
+}
+/*Title*/
+h1, h2, h3, h4, h5, h6
+{
+    font-weight : 300;
+    font-size : 1.2em;
+    line-height : 2;
+}
+p
+{
+    line-height: 2;
 }
 @media screen and (prefers-color-scheme: dark)
 {
@@ -18,5 +101,25 @@ body
     {
         background-color : #333333;
         color : #ffffff;
+    }
+    nav a
+    {
+        color : #ffffff;
+    }
+}
+@media screen and (max-width: 1200px)
+{
+    main
+    {
+        flex-flow : wrap;
+    }
+    article
+    {
+        margin-right : initial;
+    }
+    aside
+    {
+        width : 100%;
+        margin-top : 15px;
     }
 }
