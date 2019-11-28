@@ -157,6 +157,7 @@ p
         background-color : #ffffff;
         z-index : 9;
     }
+    nav.active,
     nav:hover
     {
         right : 0;
