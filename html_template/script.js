@@ -16,17 +16,16 @@ $(document).ready
             {
                 $('nav').toggleClass('active');
                 $('body').toggleClass('nav-active');
-
-                if ($('body').hasClass('nav-active') == true)
-                {
-                   
-                }
-                else
-                {
-                   
-                }
             }
         );
         
+        $('nav ul li').find('span').click
+        (
+            function()
+            {
+                $(this).toggleClass('active');
+                $(this).parent().find('ul').slideToggle();
+            }
+        );
     }
 );

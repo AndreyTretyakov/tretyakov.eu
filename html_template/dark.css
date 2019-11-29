@@ -77,4 +77,9 @@
         color : #fff !important;
         background-color : #2478e6 !important;
     }
+    nav ul li a,
+    nav ul li span
+    {
+        color : #fff;
+    }
 }

@@ -136,6 +136,11 @@ aside ul li > ul
     margin-top : 7.5px;
     font-size: .85em;
 }
+nav ul li > ul
+{
+    display : none;
+
+}
 aside ul li
 {
     margin : 0 0 7.5px;
@@ -148,8 +153,9 @@ aside ul li a
 {
     border-left : 3px solid #3c6fb1;
 }
-nav a,
-aside a
+nav ul a,
+nav ul span,
+aside ul a
 {
     display : block;
     color : #000;
@@ -160,14 +166,37 @@ aside a.active
 {
     font-weight : bold;
 }
-nav a
+nav ul a,
+nav ul span
 {
     border-radius: 5px;
 }
-nav a:hover,
-aside a:hover
+nav ul a:hover,
+nav ul span:hover,
+aside ul a:hover
 {
     background-color : rgba(0,0,0,.1);
+    cursor : pointer;
+}
+nav ul span
+{
+    display : flex;
+
+    align-content : center;
+    justify-content : flex-start;
+}
+nav ul span::after
+{
+    content : '\f0dd';
+    font-family : FontAwesome;
+    margin-left : 7.5px;
+    transition: .3s;
+}
+nav ul span.active::after
+{
+    transform: rotateX(-180deg);
+    margin-top : 3px;
+    margin-bottom : -3px;
 }
 /*Title*/
 h1, h2, h3, h4, h5, h6
