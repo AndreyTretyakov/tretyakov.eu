@@ -12,6 +12,7 @@ body
     display : flex;
     flex-direction : column;
     align-items : center;
+    position : relative;
     margin : 0;
     padding : 0 15px;
     background-color : #ffffff;
@@ -19,6 +20,17 @@ body
     font-family : Verdana;
     font-size : 16px;
     font-weight : 300;
+}
+body.nav-active::before
+{
+    content : '';
+    display : block;
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background-color : rgba(0,0,0,.6);
 }
 /*Structure*/
 .row
@@ -60,18 +72,26 @@ nav
 {
     order : -1;
 }
-/*main
+header
+{
+    background-color : rgba(26, 186, 197, 0.2);    
+}
+main
 {
     background-color : rgba(0,0,0,.1);
 }
 nav
 {
-    background-color : rgba(0,0,0,.1);
+    background-color : rgba(255,0,0,.2);
 }
 aside
 {
-    background-color : rgba(0,0,0,.1);
-}*/
+    background-color : rgba(0,255,0,.2);
+}
+footer
+{
+    background-color : rgba(197, 194, 26, 0.2);
+}
 /*Navigation*/
 nav
 {
@@ -110,17 +130,26 @@ p
 {
     line-height: 2;
 }
-@media screen and (prefers-color-scheme: dark)
+/*Article*/
+article .breadcrumbs a
 {
-    body
-    {
-        background-color : #333333;
-        color : #ffffff;
-    }
-    nav a
-    {
-        color : #ffffff;
-    }
+    display : inline-flex;
+    align-items : center;
+    color : #000000;
+    text-decoration : none;
+}
+article .breadcrumbs a::after
+{
+    font-family : FontAwesome;
+    content : '\f105';
+    margin-left : 7.5px;
+}
+article .breadcrumbs a:last-child::after
+{
+    display : none;
+    font-family : initial;
+    content : initial;
+    margin : initial;
 }
 /*Size device*/
 @media screen and (max-width: 1200px)
@@ -141,21 +170,132 @@ p
 }
 @media screen and (max-width: 768px)
 {
+    header
+    {
+        padding-right : 60px;
+        width : calc(100% - 75px);
+    }
     nav
     {
-        width : 100%;
+        width : calc(100% - 30px);
+        max-width : 335px;
+        height : 100%;
+        padding : 0 15px;
+        position : fixed;
+        right : -365px;
+        top : 0;
+        transition: .5s;
+        background-color : #ffffff;
+        z-index : 9;
     }
-    nav ul
+    nav.active
     {
-        flex-flow : wrap;
-        justify-content : space-between;
+        right : 0;
     }
-    nav ul a
+    nav .nav-button::after
     {
-        padding : 7.5px 15px;
+        font-family : FontAwesome;
+        content : '\f0c9';
+        font-size : 2rem;
     }
+    nav.active .nav-button::after
+    {
+        content : '\f00d';
+    }
+    nav .nav-button
+    {
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        width : 50px;
+        height : 50px;
+        background-color : #ccc;
+        cursor : pointer;
+        position : absolute;
+        top : 0px;
+        left : -50px;
+    }
+    nav .nav-button:hover,
+    nav.active .nav-button:hover
+    {
+        background-color : #bbb;  
+    }
+    nav.active .nav-button
+    {
+        background-color : #fff;
+    }
+    /*nav:hover::after
+    {
+        background-color : red;
+    }*/
+
+    /*ARTICLE*/
     article
     {
-        margin : 15px auto;
+        margin : 0 auto 15px;
+    }
+    article .breadcrumbs
+    {
+        border-bottom : 1px solid rgba(0,0,0,.2);
+        order : -1;
+    }
+}
+/*Mobile*/
+@media screen and (max-width: 411px)
+{
+    nav
+    {
+        max-width : 330px;
+        right : -360px;
+    }    
+}
+@media screen and (max-width: 375px)
+{
+    nav
+    {
+        max-width : 295px;
+        right : -325px;
+    }    
+}
+@media screen and (max-width: 360px)
+{
+    nav
+    {
+        max-width : 280px;
+        right : -300px;
+    }    
+}
+@media screen and (max-width: 320px)
+{
+    nav
+    {
+        max-width : 240px;
+        right : -270px;
+    }    
+}
+
+
+/*Themes*/
+@media screen and (prefers-color-scheme: dark)
+{
+    body
+    {
+        background-color : #333333;
+        color : #ffffff !important;
+    }
+    nav
+    {
+        background-color : #333333;        
+    }
+    nav .nav-button,
+    nav.active .nav-button,
+    nav.active .nav-button:hover,
+    nav.active .nav-button:active
+    {
+        background-color : #333333 !important;
+    }
+    a
+    {
+        color : #ffffff !important;
     }
 }
