@@ -1,0 +1,35 @@
+/*Themes*/
+@media screen and (prefers-color-scheme: dark)
+{
+    body
+    {
+        background-color : #333333 !important;
+        color : #ffffff !important;
+    }
+    nav,
+    ::-webkit-scrollbar-track
+    {
+        background-color : #333333 !important;        
+    }
+    nav ul li a
+    {
+        border-color : #2478e6 !important;
+    }
+    ::-webkit-scrollbar-thumb
+    {
+        -webkit-border-radius : 0px;
+        border-radius : 0px;
+        background-color : #2478e6;
+    }
+    nav .nav-button,
+    nav.active .nav-button,
+    nav.active .nav-button:hover,
+    nav.active .nav-button:active
+    {
+        background-color : #333333 !important;
+    }
+    a
+    {
+        color : #ffffff !important;
+    }
+}

@@ -3,7 +3,11 @@
     <head>
         <title>Main template</title>
         <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="ui.css">
+        <link rel="stylesheet" href="dark.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="print.css">
+        <script src="https://kit.fontawesome.com/364c8c5f9f.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -26,11 +30,18 @@
                 </p>
             </article>
             <nav>
-                <div class="nav-button" accesskey="n"></div>
+                <div class="nav-button" ></div>
                 <h3>Navigation</h3>
                 <ul>
                     <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li>
+                        <a href="#">Link</a>
+                        <ul>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
@@ -49,8 +60,7 @@
         <footer>
             <p>Text (footer)</p>
         </footer>
-    </body>
-    <script src="https://kit.fontawesome.com/364c8c5f9f.js" crossorigin="anonymous"></script>
+    </body>    
     <script src="jquery-1.12.4.js"></script>
     <script src="script.js"></script>
 </html>

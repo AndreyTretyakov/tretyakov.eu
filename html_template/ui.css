@@ -1,3 +1,7 @@
+.icon
+{
+    font-family : FontAwesome;
+}
 section
 {
     margin : 15px auto;
@@ -58,6 +62,27 @@ button .icon
 {
     margin-right : 7.5px;
 }
+/*Breadcrumb*/
+.breadcrumbs a
+{
+    display : inline-flex;
+    align-items : center;
+    color : #000000;
+    text-decoration : none;
+}
+.breadcrumbs a::after
+{
+    font-family : FontAwesome;
+    content : '\f105';
+    margin-left : 7.5px;
+}
+.breadcrumbs a:last-child::after
+{
+    display : none;
+    font-family : initial;
+    content : initial;
+    margin : initial;
+}
 /*Size device*/
 @media screen and (max-width: 1200px)
 {
@@ -79,4 +104,35 @@ button .icon
     {
         padding : 15px;
     }
+}
+
+
+/*Scroll*/
+::-webkit-scrollbar-button
+{
+    width : 0;
+    height : 0
+}
+::-webkit-scrollbar-track
+{
+    background-color : #eeeeee;
+}
+::-webkit-scrollbar-thumb
+{
+    -webkit-border-radius : 0px;
+    border-radius : 0px;
+    background-color : #999999;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color : #777777;
+}
+::-webkit-resizer
+{
+    width : 4px;
+    height : 5px;
+}
+::-webkit-scrollbar
+{
+    width : 4px;
 }
