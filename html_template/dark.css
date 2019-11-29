@@ -19,7 +19,7 @@
     {
         background-color : #333333 !important;        
     }
-    nav ul li a
+    aside ul li a
     {
         border-color : #2478e6 !important;
     }
@@ -71,5 +71,10 @@
     footer
     {
         border-color : rgba(255,255,255,.1) !important;
+    }
+    .title-active
+    {
+        color : #fff !important;
+        background-color : #2478e6 !important;
     }
 }

@@ -81,6 +81,13 @@ nav
 {
     order : -1;
 }
+.title-active
+{
+    color : #fff !important;
+    background-color : #3c6fb1;
+    transition : 1s;
+    transition-delay : .5s;
+}
 /*
 header
 {
@@ -104,38 +111,61 @@ footer
 }
 */
 /*Navigation*/
-nav
+nav,
+aside
 {
     display : flex;
     flex-flow : column;
 }
-nav ul
+nav ul,
+aside ul
 {
     list-style : none;
     display : flex;
     flex-flow : column;
     overflow-y: auto;
 }
-nav ul li > ul
+aside ul
 {
     margin-left : 15px;
 }
-nav ul li
+nav ul li > ul,
+aside ul li > ul
 {
-    margin : 5px 0;
+    margin-left : 0;
+    margin-top : 7.5px;
+    font-size: .85em;
 }
-nav ul li a
+aside ul li
+{
+    margin : 0 0 7.5px;
+}
+aside ul li:last-child
+{
+    margin-bottom : 0;
+}
+aside ul li a
 {
     border-left : 3px solid #3c6fb1;
 }
-nav a
+nav a,
+aside a
 {
     display : block;
     color : #000;
     text-decoration : none;
     padding : 7.5px;   
 }
-nav a:hover
+aside a.active
+{
+    font-weight : bold;
+}
+nav a
+{
+    border-radius: 5px;
+}
+nav a:hover,
+aside a:hover
 {
     background-color : rgba(0,0,0,.1);
 }
@@ -153,6 +183,14 @@ p
     margin : 7.5px 0;
 }
 /*Article*/
+article h3,
+article h4,
+article h5,
+article h6
+{
+    padding : 7.5px;
+    margin : 7.5px -7.5px;
+}
 article p
 {
     text-align : justify;
