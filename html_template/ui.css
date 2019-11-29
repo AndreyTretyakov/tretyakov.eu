@@ -1,14 +1,38 @@
+.icon
+{
+    font-family : FontAwesome;
+}
 section
 {
     margin : 15px auto;
     width : 100%;
 }
-
+input[type=text]::-ms-clear
+{
+    display : none;
+    width : 0;
+    height : 0;
+}
+input[type=text]::-ms-reveal
+{
+    display : none;
+    width : 0;
+    height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+{
+    display : none;
+}
 input[type=text],
 input[type=email],
 input[type=password],
 input[type=search],
-textarea
+textarea,
+.input-search,
+.input-text
 {
     display : inline-flex;
     width : calc(100% - 17px);
@@ -23,10 +47,11 @@ textarea
     font-size : 1em;
     line-height : 1;
     text-align : left;
+    outline : none;
 }
-textarea
+input[type=search]
 {
-    line-height : 2;
+    width : 100%;
 }
 input[type=submit],
 button
@@ -37,9 +62,10 @@ button
     width : auto;
     min-width : 100px;
     height : auto;
-    padding : 7.5px;
+    padding : 7.5px 15px;
     margin : 7.5px auto;
     border : 1px solid #000000;
+    border-radius: 5px;
     background-color : #ffffff;
     color : #000000;
     font-family: Verdana;
@@ -47,6 +73,20 @@ button
     font-size : 1em;
     text-align : center;
     cursor : pointer;
+    outline : none;
+}
+input[type=submit]:hover,
+button:hover
+{
+    background-color : #2478e6;
+    border-color : #0e2e57;
+    color : #fff;
+}
+input[type=submit]:active,
+button:active
+{
+    background-color : #226ed3;
+    color : #fff;
 }
 button span
 {
@@ -57,6 +97,62 @@ button span
 button .icon
 {
     margin-right : 7.5px;
+}
+/*Input with icon*/
+.input-search,
+.input-text
+{
+    display : flex;
+    align-items: center;
+}
+.input-search input[type=search],
+.input-text input[type=text]
+{
+    background-color : transparent;
+    border : none;
+    color : #000;
+    padding : 0;
+    margin : 0;
+}
+.input-search .icon,
+.input-text .icon
+{
+    display : block;
+}
+/*Breadcrumb*/
+.breadcrumbs
+{
+    list-style : none;
+    display : flex;
+    flex-flow : wrap;
+    justify-content : flex-start;
+    align-items : center;
+}
+.breadcrumbs li::after
+{
+    font-family : FontAwesome;
+    content : '\f105';
+    margin : 0 7.5px;
+}
+.breadcrumbs li:last-child::after
+{
+    display : none;
+    font-family : initial;
+    content : initial;
+    margin : initial;
+}
+.breadcrumbs a
+{
+    display : inline-flex;
+    align-items : center;
+    color : #000000;
+    text-decoration : none;
+    padding : 7.5px;
+    border-radius : 4px;
+}
+.breadcrumbs a:hover
+{
+    background-color : rgba(0,0,0,.1);
 }
 /*Size device*/
 @media screen and (max-width: 1200px)
@@ -79,4 +175,35 @@ button .icon
     {
         padding : 15px;
     }
+}
+
+
+/*Scroll*/
+::-webkit-scrollbar-button
+{
+    width : 0;
+    height : 0
+}
+::-webkit-scrollbar-track
+{
+    background-color : #eeeeee;
+}
+::-webkit-scrollbar-thumb
+{
+    -webkit-border-radius : 0px;
+    border-radius : 0px;
+    background-color : #999999;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color : #777777;
+}
+::-webkit-resizer
+{
+    width : 4px;
+    height : 5px;
+}
+::-webkit-scrollbar
+{
+    width : 4px;
 }

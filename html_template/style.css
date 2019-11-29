@@ -3,9 +3,13 @@
     margin : 0;
     padding : 0;
 }
-html, body
+html
 {
     height : 100%;
+}
+html, body
+{
+    min-height : 100%;
 }
 body
 {
@@ -54,10 +58,16 @@ header, footer
 {
     flex : 0 0 auto;
 }
+/*header
+{
+    background-color : #3c6fb1;
+    color : #fff;
+}*/
 main
 {
     display : flex;
     flex : 1 0 auto;
+    border-bottom : 1px solid rgba(0,0,0,0);
 }
 nav, aside
 {
@@ -72,6 +82,14 @@ nav
 {
     order : -1;
 }
+.title-active
+{
+    color : #fff !important;
+    background-color : #3c6fb1;
+    transition : 1s;
+    transition-delay : .5s;
+}
+/*
 header
 {
     background-color : rgba(26, 186, 197, 0.2);    
@@ -92,32 +110,94 @@ footer
 {
     background-color : rgba(197, 194, 26, 0.2);
 }
+*/
 /*Navigation*/
-nav
+nav,
+aside
 {
     display : flex;
     flex-flow : column;
 }
-nav ul
+nav ul,
+aside ul
 {
     list-style : none;
     display : flex;
     flex-flow : column;
+    overflow-y: auto;
 }
-nav ul li
+aside ul
 {
-    border : 1px dashed green;
+    margin-left : 15px;
 }
-nav a
+nav ul li > ul,
+aside ul li > ul
+{
+    margin-left : 0;
+    margin-top : 7.5px;
+    font-size: .85em;
+}
+nav ul li > ul
+{
+    display : none;
+
+}
+aside ul li
+{
+    margin : 0 0 7.5px;
+}
+aside ul li:last-child
+{
+    margin-bottom : 0;
+}
+aside ul li a
+{
+    border-left : 3px solid #3c6fb1;
+}
+nav ul a,
+nav ul span,
+aside ul a
 {
     display : block;
     color : #000;
     text-decoration : none;
     padding : 7.5px;   
 }
-nav a:hover
+aside a.active
+{
+    font-weight : bold;
+}
+nav ul a,
+nav ul span
+{
+    border-radius: 5px;
+}
+nav ul a:hover,
+nav ul span:hover,
+aside ul a:hover
 {
     background-color : rgba(0,0,0,.1);
+    cursor : pointer;
+}
+nav ul span
+{
+    display : flex;
+
+    align-content : center;
+    justify-content : flex-start;
+}
+nav ul span::after
+{
+    content : '\f0dd';
+    font-family : FontAwesome;
+    margin-left : 7.5px;
+    transition: .3s;
+}
+nav ul span.active::after
+{
+    transform: rotateX(-180deg);
+    margin-top : 3px;
+    margin-bottom : -3px;
 }
 /*Title*/
 h1, h2, h3, h4, h5, h6
@@ -125,32 +205,34 @@ h1, h2, h3, h4, h5, h6
     font-weight : 300;
     font-size : 1.2em;
     line-height : 2;
+    margin : 7.5px 0;
 }
 p
 {
     line-height: 2;
+    margin : 7.5px 0;
 }
 /*Article*/
-article .breadcrumbs a
+article h3,
+article h4,
+article h5,
+article h6
 {
-    display : inline-flex;
-    align-items : center;
-    color : #000000;
-    text-decoration : none;
+    padding : 7.5px;
+    margin : 7.5px -7.5px;
 }
-article .breadcrumbs a::after
+article p
 {
-    font-family : FontAwesome;
-    content : '\f105';
-    margin-left : 7.5px;
+    text-align : justify;
 }
-article .breadcrumbs a:last-child::after
+/*Footer*/
+footer
 {
-    display : none;
-    font-family : initial;
-    content : initial;
-    margin : initial;
+    text-align : center;
+    border-top : 1px solid rgba(0,0,0,.3);
+    color : #666;
 }
+
 /*Size device*/
 @media screen and (max-width: 1200px)
 {
@@ -166,14 +248,14 @@ article .breadcrumbs a:last-child::after
     aside
     {
         width : 100%;
+        margin-left : 215px;
     }
 }
 @media screen and (max-width: 768px)
 {
-    header
+    body
     {
-        padding-right : 60px;
-        width : calc(100% - 75px);
+        margin-right : 35px;
     }
     nav
     {
@@ -229,15 +311,22 @@ article .breadcrumbs a:last-child::after
         background-color : red;
     }*/
 
-    /*ARTICLE*/
+    /*Article*/
     article
     {
         margin : 0 auto 15px;
     }
     article .breadcrumbs
     {
-        border-bottom : 1px solid rgba(0,0,0,.2);
+        padding : 7.5px 0;
+        margin : 0;
+        border-bottom : 1px solid rgba(0,0,0,.1);
         order : -1;
+    }
+    /*Aside*/
+    aside
+    {
+        margin-left : initial;
     }
 }
 /*Mobile*/
@@ -262,7 +351,7 @@ article .breadcrumbs a:last-child::after
     nav
     {
         max-width : 280px;
-        right : -300px;
+        right : -310px;
     }    
 }
 @media screen and (max-width: 320px)
@@ -272,30 +361,4 @@ article .breadcrumbs a:last-child::after
         max-width : 240px;
         right : -270px;
     }    
-}
-
-
-/*Themes*/
-@media screen and (prefers-color-scheme: dark)
-{
-    body
-    {
-        background-color : #333333;
-        color : #ffffff !important;
-    }
-    nav
-    {
-        background-color : #333333;        
-    }
-    nav .nav-button,
-    nav.active .nav-button,
-    nav.active .nav-button:hover,
-    nav.active .nav-button:active
-    {
-        background-color : #333333 !important;
-    }
-    a
-    {
-        color : #ffffff !important;
-    }
 }

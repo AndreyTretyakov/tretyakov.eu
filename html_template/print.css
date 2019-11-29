@@ -1,0 +1,25 @@
+/*Themes*/
+@media print
+{
+    body
+    {
+        background-color : #ffffff !important;
+        color : #000000 !important;
+    }
+    nav,
+    .breadcrumbs,
+    aside,
+    footer
+    {
+        display : none !important;
+    }
+    main
+    {
+        flex-flow : wrap;
+        padding : 0;
+    }
+    article
+    {
+        margin : 0 auto 15px !important;
+    }
+}

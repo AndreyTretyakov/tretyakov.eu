@@ -2,8 +2,12 @@
 <html>
     <head>
         <title>UI elements</title>
-        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="ui.css">
+        <link rel="stylesheet" href="dark.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="print.css">
+        <script src="https://kit.fontawesome.com/364c8c5f9f.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -14,20 +18,41 @@
                 <h2>Form elements</h2>
                 <h3>Input [type=text]</h3>
                 <input type="text" placeholder="text">
+                <h3>Input [type=text] with icon</h3>
+                <div class="input-text">
+                    <input type="text" placeholder="text">
+                    <span class="icon fa fa-check"></span>
+                </div>
                 <h3>Input [type=password]</h3>
                 <input type="password" placeholder="password">
+                <h3>Input [type=search]</h3>
+                <input type="search" placeholder="search">
+                <h3>Input [type=search] with icon</h3>
+                <div class="input-search">
+                    <input type="search" placeholder="search">
+                    <span class="icon fa fa-circle-notch fa-spin"></span>
+                </div>
+                <h3>Label</h3>
+                <label for="input-1">Label</label>
+                <input type="text" placeholder="text" id="input-1">
                 <h3>Textarea</h3>
-                <textarea placeholder="textarea" rows="3"></textarea>
+                <textarea placeholder="textarea" rows="4"></textarea>
                 <h3>Input [type=submit]</h3>
                 <input type="submit" value="Submit">
                 <h3>Button</h3>
                 <button>Button</button>
                 <h3>Button with icon</h3>
                 <button>
-                    <span class="icon">ico</span>
+                    <span class="icon fas fa-check"></span>
+                    <span class="value">Button</span>
+                </button>
+                <button>
+                    <span class="icon fas fa-circle-notch fa-spin"></span>
                     <span class="value">Button</span>
                 </button>
             </section>
         </main>
     </body>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="script.js"></script>
 </html>
