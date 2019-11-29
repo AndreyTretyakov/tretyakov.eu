@@ -6,6 +6,14 @@
         background-color : #333333 !important;
         color : #ffffff !important;
     }
+    header
+    {
+        background-color : #2478e6 !important;
+    }
+    .icon
+    {
+        color : #2478e6;
+    }
     nav,
     ::-webkit-scrollbar-track
     {
@@ -35,5 +43,33 @@
     .breadcrumbs a:hover
     {
         background-color : #2478e6;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=search],
+    textarea,
+    .input-search,
+    .input-text
+    {
+        border-color : #222;
+        background-color : #444444;
+        color : #ffffff !important;
+    }
+    input[type=submit],
+    button
+    {
+        border-color : #222;
+        background-color : #444444;
+        color : #fff;
+    }
+    input[type=submit] .icon,
+    button .icon
+    {
+        color : #fff;
+    }
+    footer
+    {
+        border-color : rgba(255,255,255,.1) !important;
     }
 }

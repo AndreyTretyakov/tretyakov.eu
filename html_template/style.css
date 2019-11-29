@@ -58,6 +58,11 @@ header, footer
 {
     flex : 0 0 auto;
 }
+header
+{
+    background-color : #3c6fb1;
+    color : #fff;
+}
 main
 {
     display : flex;
@@ -121,7 +126,7 @@ nav ul li
 }
 nav ul li a
 {
-    border-left : 3px solid #2478e6;
+    border-left : 3px solid #3c6fb1;
 }
 nav a
 {
@@ -156,6 +161,7 @@ article p
 footer
 {
     text-align : center;
+    border-top : 1px solid rgba(0,0,0,.3);
     color : #666;
 }
 
