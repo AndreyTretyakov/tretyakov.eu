@@ -1,0 +1,82 @@
+section
+{
+    margin : 15px auto;
+    width : 100%;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+textarea
+{
+    display : inline-flex;
+    width : calc(100% - 17px);
+    height : auto;
+    padding : 7.5px;
+    margin : 7.5px auto;
+    border : 1px solid #000000;
+    background-color : #ffffff;
+    color : #000000;
+    font-family: Verdana;
+    font-weight : 300;
+    font-size : 1em;
+    line-height : 1;
+    text-align : left;
+}
+textarea
+{
+    line-height : 2;
+}
+input[type=submit],
+button
+{
+    display : inline-flex;
+    align-items : center;
+    justify-content: center;
+    width : auto;
+    min-width : 100px;
+    height : auto;
+    padding : 7.5px;
+    margin : 7.5px auto;
+    border : 1px solid #000000;
+    background-color : #ffffff;
+    color : #000000;
+    font-family: Verdana;
+    font-weight : 300;
+    font-size : 1em;
+    text-align : center;
+    cursor : pointer;
+}
+button span
+{
+    display : inline-flex;
+    align-items : center;
+    justify-content : center;
+}
+button .icon
+{
+    margin-right : 7.5px;
+}
+/*Size device*/
+@media screen and (max-width: 1200px)
+{
+
+}
+@media screen and (max-width: 768px)
+{
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=search],
+    textarea
+    {
+        width : calc(100% - 32px);
+        padding : 15px;
+    }
+    input[type=submit],
+    button
+    {
+        padding : 15px;
+    }
+}
