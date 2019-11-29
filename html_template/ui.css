@@ -63,25 +63,39 @@ button .icon
     margin-right : 7.5px;
 }
 /*Breadcrumb*/
+.breadcrumbs
+{
+    list-style : none;
+    display : flex;
+    flex-flow : wrap;
+    justify-content : flex-start;
+    align-items : center;
+}
+.breadcrumbs li::after
+{
+    font-family : FontAwesome;
+    content : '\f105';
+    margin : 0 7.5px;
+}
+.breadcrumbs li:last-child::after
+{
+    display : none;
+    font-family : initial;
+    content : initial;
+    margin : initial;
+}
 .breadcrumbs a
 {
     display : inline-flex;
     align-items : center;
     color : #000000;
     text-decoration : none;
+    padding : 7.5px;
+    border-radius : 4px;
 }
-.breadcrumbs a::after
+.breadcrumbs a:hover
 {
-    font-family : FontAwesome;
-    content : '\f105';
-    margin-left : 7.5px;
-}
-.breadcrumbs a:last-child::after
-{
-    display : none;
-    font-family : initial;
-    content : initial;
-    margin : initial;
+    background-color : rgba(0,0,0,.1);
 }
 /*Size device*/
 @media screen and (max-width: 1200px)

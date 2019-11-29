@@ -76,6 +76,7 @@ nav
 {
     order : -1;
 }
+/*
 header
 {
     background-color : rgba(26, 186, 197, 0.2);    
@@ -96,6 +97,7 @@ footer
 {
     background-color : rgba(197, 194, 26, 0.2);
 }
+*/
 /*Navigation*/
 nav
 {
@@ -115,7 +117,7 @@ nav ul li > ul
 }
 nav ul li
 {
-    margin : 2.5px 0;
+    margin : 5px 0;
 }
 nav ul li a
 {
@@ -138,12 +140,24 @@ h1, h2, h3, h4, h5, h6
     font-weight : 300;
     font-size : 1.2em;
     line-height : 2;
+    margin : 7.5px 0;
 }
 p
 {
     line-height: 2;
+    margin : 7.5px 0;
 }
 /*Article*/
+article p
+{
+    text-align : justify;
+}
+/*Footer*/
+footer
+{
+    text-align : center;
+    color : #666;
+}
 
 /*Size device*/
 @media screen and (max-width: 1200px)
@@ -160,6 +174,7 @@ p
     aside
     {
         width : 100%;
+        margin-left : 215px;
     }
 }
 @media screen and (max-width: 768px)
@@ -222,15 +237,22 @@ p
         background-color : red;
     }*/
 
-    /*ARTICLE*/
+    /*Article*/
     article
     {
         margin : 0 auto 15px;
     }
     article .breadcrumbs
     {
-        border-bottom : 1px solid rgba(0,0,0,.2);
+        padding : 7.5px 0;
+        margin : 0;
+        border-bottom : 1px solid rgba(0,0,0,.1);
         order : -1;
+    }
+    /*Aside*/
+    aside
+    {
+        margin-left : initial;
     }
 }
 /*Mobile*/
@@ -255,7 +277,7 @@ p
     nav
     {
         max-width : 280px;
-        right : -300px;
+        right : -310px;
     }    
 }
 @media screen and (max-width: 320px)
