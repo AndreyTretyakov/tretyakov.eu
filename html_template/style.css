@@ -58,15 +58,16 @@ header, footer
 {
     flex : 0 0 auto;
 }
-header
+/*header
 {
     background-color : #3c6fb1;
     color : #fff;
-}
+}*/
 main
 {
     display : flex;
     flex : 1 0 auto;
+    border-bottom : 1px solid rgba(0,0,0,0);
 }
 nav, aside
 {

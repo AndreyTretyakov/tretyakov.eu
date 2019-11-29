@@ -8,7 +8,11 @@
     }
     header
     {
-        background-color : #2478e6 !important;
+        /*background-color : #2478e6 !important;*/
+    }
+    main
+    {
+        border-color : rgba(0,0,0,.2) !important;
     }
     .icon
     {
